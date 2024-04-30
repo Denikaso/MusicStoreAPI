@@ -40,5 +40,12 @@ namespace MusicStoreAPI.Controllers
             var products = new ProductBD().SearchBySubCategory(subcategoryId);
             return products;
         }
+
+        [HttpGet("GetProductById/{Id}")]
+        public Product? GetProductById(int Id)
+        {
+            var product = new ProductBD().SearchById(Id);
+            return product;
+        }
     }
 }
