@@ -28,6 +28,13 @@ namespace MusicStoreAPI.Controllers
             new OrderBD().UpdateOrder(id, customer, status, date);
         }
 
+        [HttpGet("GetOrdersByCustomer/{id}")]
+        public IEnumerable<Order> GetOrdersByCustomer(int id)
+        {
+            var orders = new OrderBD().SearchByCustomer(id);
+            return orders;
+        }
+
         [HttpDelete("Order/{id}/Delete")]
         public void Delete(int id)
         {
