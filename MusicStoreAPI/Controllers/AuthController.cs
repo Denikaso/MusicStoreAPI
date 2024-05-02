@@ -41,6 +41,20 @@ namespace MusicStoreAPI.Controllers
             return Ok(new { token });            
         }
 
+        [HttpPost("verifyPassword")]
+        public IActionResult VerifyPassword([FromBody] VerifyPasswordRequest request)
+        {
+            Customer? customer = _customer.SearchById(request.Id);
+
+            // Проверка пароля
+            if (BCrypt.Net.BCrypt.Verify(request.Password, customer.Password))
+            {
+                return Ok("Пароль подтвержден");
+            }
+
+            return BadRequest("Неверный пароль");
+        }
+
         [ApiExplorerSettings(IgnoreApi = true)]
         public string GenerateJwtToken(int id, string email, string role)
         {

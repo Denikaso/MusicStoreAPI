@@ -17,15 +17,15 @@ namespace MusicStoreAPI.Controllers
         }
 
         [HttpPost("NewCustomer")]
-        public void Post(string name, string email, string phoneNumber, string password, string role)
+        public void Post(string name, string email, string phoneNumber, string address, string password, string role)
         {
-            new CustomerBD().Create(name, email, phoneNumber, password, role);
+            new CustomerBD().Create(name, email, phoneNumber, address, password, role);
         }
 
         [HttpPut("UpdateCustomer/{id}")]
-        public void Put(int id, string name, string email, string phoneNumber, string password, string role)
+        public void Put(int id, [FromBody] Customer customer)
         {
-            new CustomerBD().UpdateCustomer(id, name, email, phoneNumber, password, role);
+            new CustomerBD().UpdateCustomer(id, customer.Name, customer.Email, customer.PhoneNumber, customer.Address, customer.Password, customer.Role);
         }
 
         [HttpDelete("Customer/{id}/Delete")]

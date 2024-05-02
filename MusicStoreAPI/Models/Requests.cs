@@ -10,4 +10,11 @@ namespace MusicStoreAPI.Models
         [Required]
         public string Password { get; set; }
     }
+    public class VerifyPasswordRequest
+    {
+        [Required]
+        public int Id { get; set; }
+        [Required]
+        public string Password { get; set; }
+    }
 }
