@@ -35,7 +35,7 @@ namespace MusicStoreAPI.Controllers
             return orders;
         }
 
-        [HttpDelete("/Delete/{id}")]
+        [HttpDelete("/DeleteOrder/{id}")]
         public void Delete(int id)
         {
             new OrderBD().Delete(id);
