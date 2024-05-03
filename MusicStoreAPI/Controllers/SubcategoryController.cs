@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new SubcategoryBD().UpdateSubcategory(id, title, section);
         }
 
-        [HttpDelete("Subcategory/{id}/Delete")]
+        [HttpDelete("/{id}/Delete")]
         public void Delete(int id)
         {
             new SubcategoryBD().Delete(id);

@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new CategoryBD().UpdateCategory(id, title, section);
         }
 
-        [HttpDelete("Category/{id}/Delete")]
+        [HttpDelete("/{id}/Delete")]
         public void Delete(int id)
         {
             new CategoryBD().Delete(id);

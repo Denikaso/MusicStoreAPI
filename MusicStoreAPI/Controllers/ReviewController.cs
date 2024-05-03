@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new ReviewBD().UpdateReview(id, customer, product, rating, text);
         }
 
-        [HttpDelete("Review/{id}/Delete")]
+        [HttpDelete("/{id}/Delete")]
         public void Delete(int id)
         {
             new ReviewBD().Delete(id);

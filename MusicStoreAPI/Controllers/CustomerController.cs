@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new CustomerBD().UpdateCustomer(id, customer.Name, customer.Email, customer.PhoneNumber, customer.Address, customer.Password, customer.Role);
         }
 
-        [HttpDelete("Customer/{id}/Delete")]
+        [HttpDelete("/{id}/Delete")]
         public void Delete(int id)
         {
             new CustomerBD().Delete(id);
