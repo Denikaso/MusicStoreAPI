@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new SupplyBD().UpdateSupply(id, supplier, product, pricePerUnit, quantity);
         }
 
-        [HttpDelete("/{id}/Delete")]
+        [HttpDelete("/Delete/{id}")]
         public void Delete(int id)
         {
             new SupplyBD().Delete(id);

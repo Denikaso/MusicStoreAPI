@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new PaymentBD().UpdatePayment(id, order, totalPrice, paymentDate, paymentMethod);
         }
 
-        [HttpDelete("/{id}/Delete")]
+        [HttpDelete("/Delete/{id}")]
         public void Delete(int id)
         {
             new PaymentBD().Delete(id);

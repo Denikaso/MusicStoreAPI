@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new DeliveryBD().UpdateDelivey(id, order, deliveryDate, address, status, price);
         }
 
-        [HttpDelete("/{id}/Delete")]
+        [HttpDelete("/Delete/{id}")]
         public void Delete(int id)
         {
             new DeliveryBD().Delete(id);

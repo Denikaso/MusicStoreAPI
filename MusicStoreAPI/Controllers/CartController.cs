@@ -28,7 +28,7 @@ namespace MusicStoreAPI.Controllers
             new CartBD().UpdateCart(id, customer, status, totalPrice);
         }
 
-        [HttpDelete("/{id}/Delete")]
+        [HttpDelete("/Delete/{id}")]
         public void Delete(int id)
         {
             new CartBD().Delete(id);
