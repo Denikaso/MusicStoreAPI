@@ -69,3 +69,7 @@
     ```
     GET /api/Product/GetProductById/1
     ```
+##  Связанные репозитории
+
+*  **[Описание и CRUD классы моделей](https://github.com/Denikaso/MusicStore)**
+*  **[Фронтентд на Vue.js](https://github.com/Denikaso/music-store)**
